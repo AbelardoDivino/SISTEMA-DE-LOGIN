@@ -10,7 +10,11 @@ const minusculas = "abcdefghijklmnopqrstuvwxyz".split('');
 // console.log(alfabeto);
 
 const numeros = '0123456789'.split("")
-enviar.addEventListener("click",(e)=>{
+
+const receberdadospagina1 = document.getElementById("receberdadospagina1")
+
+if (enviar) {
+   enviar.addEventListener("click",(e)=>{
 
     // e.preventDefault();
 
@@ -45,5 +49,22 @@ let temespecial = [...caracters].some(c => senha.includes(c))
     else{
       alert("senha precisa ter letra maiúscula, número e caractere especial")
     }
+   
+    localStorage.setItem("nome",inputnome.value) // envair para pagina 2
+    localStorage.setItem("senha",inputsenha.value)
+
    window.location.href = "index2.html"
 })
+
+}
+
+if (receberdadospagina1) {
+   let nome = localStorage.getItem("nome")  //pegar da pagina1
+   let senha = localStorage.getItem("senha")
+
+   receberdadospagina1.innerHTML = `
+      <p>:${nome}</p>
+         <p>:${senha}</p>
+
+   `
+}
