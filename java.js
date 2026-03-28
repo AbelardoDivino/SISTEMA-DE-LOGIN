@@ -58,13 +58,13 @@ let temespecial = [...caracters].some(c => senha.includes(c))
 
 }
 
-if (receberdadospagina1) {
-   let nome = localStorage.getItem("nome")  //pegar da pagina1
-   let senha = localStorage.getItem("senha")
+// if (receberdadospagina1) {
+//    let nome = localStorage.getItem("nome")  //pegar da pagina1
+//    let senha = localStorage.getItem("senha")
 
-   receberdadospagina1.innerHTML = `
-      <p>:${nome}</p>
-         <p>:${senha}</p>
+//    receberdadospagina1.innerHTML = `
+//       <p>:${nome}</p>
+//       <p>:${senha}</p>
 
-   `
-}
+//    `
+// }

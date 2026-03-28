@@ -5,19 +5,33 @@
 }
 
 body{
+    height: 90vh;
+    width: 98vw;
     background-color: gray;
 }
 
 .comtainer{
-    display: grid;
+    /* display: grid; */
+    
+         display: grid;
+        position: relative;
+        bottom: -50px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1.1em;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
 
 }
 
 #fotogithub{
  border-radius: 5px 5px;
-            position: relative;
-            bottom: -60px;
-            height: 60px;
+position: relative;
+bottom: -220px;
+right: -640px;
+ height: 60px;
 }
 
 #copi{
@@ -30,12 +44,16 @@ body{
         right: 100px;
 }
 
+.receberinputs{
+    
+}
+
 #receberdadospagina1 {
     width: 400px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: #1e1e1e;
+    background-color:gray;
     color: white;
     text-align: center;
     font-size: 18px;
