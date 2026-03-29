@@ -27,6 +27,26 @@
         height: 80px;
     }
 
+    .input-container {
+    position: relative;
+    width: 300px;
+}
+
+#inputsenha {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+}
+
+#versenha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    cursor: pointer;
+}
+
     #inputnome{
         height: 40px;
         width: 200px;

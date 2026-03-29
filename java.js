@@ -13,6 +13,8 @@ const numeros = '0123456789'.split("")
 
 const receberdadospagina1 = document.getElementById("receberdadospagina1")
 
+let versenha = document.getElementById("versenha")
+
 if (enviar) {
    enviar.addEventListener("click",(e)=>{
 
@@ -26,7 +28,7 @@ if (enviar) {
     }
 
     if (inputsenha.value.length < 8 || inputsenha.value.length > 40 ) {
-      alert("erro tente novamente senha muito pequena minimo 8 e maximo 40 caracters")
+      return alert("erro tente novamente senha muito pequena minimo 8 e maximo 40 caracters")
     }
 
     let senha = inputsenha.value
@@ -41,13 +43,13 @@ let temespecial = [...caracters].some(c => senha.includes(c))
       // let temnumero = numeros.test(senha)
       // let temespecial = caracters.test(senha)
 
-      if(maiusc && temnumero && temespecial) {
-         console.log("acesso permetido")
+      if(!(maiusc && temnumero && temespecial)) {
+        return alert("senha errada")
       }
     
 
     else{
-      alert("senha precisa ter letra maiúscula, número e caractere especial")
+      console.log("login")
     }
    
     localStorage.setItem("nome",inputnome.value) // envair para pagina 2
@@ -57,6 +59,34 @@ let temespecial = [...caracters].some(c => senha.includes(c))
 })
 
 }
+
+
+versenha.addEventListener("click",()=>{
+   if (inputsenha.type === "password") {
+      inputsenha.type = "text"
+      versenha.src = "imagens/olhoaberto.png"
+   }
+   else{
+      inputsenha.type = "password"
+      versenha.src = "imagens/olho-cortado.png"
+   }
+})
+
+
+
+
+
+//         if (inputsenha.type === "password") {
+//             inputsenha.type = "text"
+//             versenha.src = "imagens/olhoaberto.png"
+//         } else {
+//             inputsenha.type = "password"
+//             versenha.src = "imagens/olho-cortado.png"
+//         }
+
+//     })
+//
+
 
 // if (receberdadospagina1) {
 //    let nome = localStorage.getItem("nome")  //pegar da pagina1
